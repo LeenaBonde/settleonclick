@@ -1,0 +1,805 @@
+<?php
+include("backend/Bcode/conn.php");
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>SettleOnClick.</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .icon {
+      position: relative;
+    }
+
+    .ic {
+      position: absolute;
+      left: 0;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body class="index-page" data-bs-spy="SettleOnClick" data-bs-target="#navmenu">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <a href="#" class="logo d-flex align-items-center me-auto me-xl-0">
+
+        <h1>SettleOnClick</h1>
+        <span>.</span>
+      </a>
+
+      <!-- Nav Menu -->
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero" class="active">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li class="dropdown "><a href="index.html#services"><span>Services</span> <i
+                class="bi bi-chevron-down"></i></a>
+            <ul class="dd-box-shadow">
+              <li><a href="trans.html">Transportors</a></li>
+              <li><a href="lab.html">Labourers</a></li>
+              <li><a href="electric.html">Electricians</a></li>
+              <li><a href="plumber.html">Plumbers</a></li>
+              <li><a href="cook.html">Cook</a></li>
+              <li><a href="clean.html">Cleaners</a></li>
+
+            </ul>
+          </li>
+          <li><a href="index.html#faq">Help</a></li>
+          <li><a href="index.html#testimonials">Feedbacks</a></li>
+
+
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="backend/login.html">Admin Login</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- Hero Section - Home Page -->
+    <section id="hero" class="hero">
+
+      <img src="assets/Icons/hero-bg.jpg" alt="" data-aos="fade-in">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10" style="margin-bottom: 20px;">
+            <h2 data-aos="fade-up" data-aos-delay="100">Settle Down in One Click!</h2>
+            <p data-aos="fade-up" data-aos-delay="200">Get all you need to move and
+              settle in new place.<br>Find nearest best service provider with us</p>
+          </div>
+
+          <div>
+            <a href="index.html#services">
+              <button type="button" class="btn btn-danger"><i class="bi bi-search"></i> Search services near you </button></a>
+          </div>
+
+
+         
+        </div>
+
+    </section><!-- End Hero Section -->
+
+    <!-- Clients Section - Home Page -->
+    <section id="clients" class="clients">
+
+      <div class="container-fluid" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/Icons/vehicle_icon.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/Icons/workers.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/Icons/electrician.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/Icons/plumber (2).png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/Icons/maid.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/Icons/cooking.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- End Clients Section -->
+
+    <!-- About Section - Home Page -->
+    <section id="about" class="about">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-xl-center gy-5">
+
+          <div class="col-xl-5 content">
+            <h3>About Us</h3>
+            <h2>Tailored services for your Relocation journey</h2>
+            <p>Empowering Your Move, Enriching Your Journey: A Comprehensive Hub of Expertise – Labor, Transportation,
+              Plumbing, Electrical, Cleaning, and Culinary Services, Dedicated to Seamlessly Elevating Your Relocation
+              Experience</p>
+            <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+
+          <div class="col-xl-7">
+            <div class="row gy-4 icon-boxes">
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon-box">
+                  <img src="assets/icons/target.gif" style="width:60px ;height:60px">
+
+                  <h3>Your Move, Our Expertise</h3>
+                  <p>Your Move, Your Way: Expert Labor, Transportation, and Home Services Tailored to Your Relocation
+                    Needs</p>
+
+                </div>
+              </div> <!-- End Icon Box -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box">
+                  <img src="assets/icons/truck.gif" style="width:60px ;height:60px">
+                  <h3>Moving Made Easy</h3>
+                  <p>Shifting Homes, Simplified: Bringing Together Professionals to Handle Every Aspect of Your Move</p>
+                </div>
+              </div> <!-- End Icon Box -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-box">
+                  <img src="assets/icons/click.gif" style="width:60px ;height:60px">
+                  <h3>Where Every Move Matters</h3>
+                  <p>Welcome Home: Tailored Services for Your Relocation Journey – Labor, Transport, and Home Experts
+                    Standing By.</p>
+                </div>
+              </div> <!-- End Icon Box -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="icon-box">
+                  <img src="assets/icons/handshake (1).gif" style="width:60px ;height:60px">
+                  <h3>Hassel-free Home Shifting</h3>
+                  <p>Relocate with Confidence: Connecting You to Skilled Hands and Trusted Services for a Seamless Move.
+                  </p>
+                </div>
+              </div> <!-- End Icon Box -->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- End About Section -->
+
+    <!-- Stats Section - Home Page -->
+    <section id="stats" class="stats">
+
+      <img src="assets/Icons/box.jpg" alt="" data-aos="fade-in">
+
+      <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-3">
+
+          <div class="col-lg-4 col-md-8">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="543" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Cook</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-4 col-md-8">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="543" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Plumbers</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-4 col-md-8">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="543" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Cleaners</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+
+          <div class="col-lg-4 col-md-8">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="777" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Labourers</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-4 col-md-8">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="234" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Electricians</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-4 col-md-8">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="89" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Transportors</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- End Stats Section -->
+
+    <!-- Services Section - Home Page -->
+    <section id="services" class="services">
+
+      <!--  Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Get what you need here!</h2>
+        <p>Find nearby service providers to help you settle easily.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5">
+            <select id="city" class="form-control">
+              <option value="">Select Your City</option>
+              <option value="Nashik">Nashik</option>
+              <option value="Kolkatta">Kolkata</option>
+              <option value="Thane">Thane</option>
+              <option value="Solapur">Solapur</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Pune">Pune</option>
+            </select>
+          </div>
+          <div class="col-lg-5">
+            <select name="Service" id="service" class="form-control">
+              <option value="select">Select service</option>
+              <option value="Transportors">Transportors</option>
+              <option value="Labourers">Labourers</option>
+              <option value="Cleaners">Cleaners</option>
+              <option value="Cook">Cook</option>
+              <option value="Plumber">Plumber</option>
+              <option value="Electrician">Electrician</option>
+            </select>
+          </div>
+          <div class="col-lg-2">
+            <button type="button" class="btn btn-danger" onclick="getServiceInfo()">Search</button>
+          </div>
+        </div>
+        <br>
+        <div class="row gy-4" id="service_data">
+
+      
+
+        </div>
+
+      </div>
+
+    </section><!-- End Services Section -->
+
+    <section id="services" class="services">
+
+      <!--  Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <p>Find nearby service providers to help you settle easily.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><img src="assets/icons/workers_icon.png" style="width:60px ;height:60px"></div>
+              <div>
+                <h4 class="title"><a href="lab.html" class="stretched-link">Labourers</a></h4>
+                <p class="description">Loading and unloading services for household items.
+                  Packing and unpacking assistance for a smooth relocation process.
+                  Heavy lifting and transportation of furniture and appliances.</p>
+              </div>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><img src="assets/icons/vehicle_icon.png" style="width:60px ;height:60px"></div>
+              <div>
+                <h4 class="title"><a href="trans.html" class="stretched-link">Transportors</a></h4>
+                <p class="description">Local and long-distance moving services for household goods.
+                  Vehicle transport for relocating cars and motorcycles.
+                  Rental trucks or vans for users who prefer a DIY approach.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><img src="assets/icons/plumber_icon.png" style="width:60px ;height:60px"></div>
+              <div>
+                <h4 class="title"><a href="plumber.html" class="stretched-link">Plumbers</a></h4>
+                <p class="description">Disconnection and reconnection of plumbing fixtures during relocation.
+                  Inspection and maintenance of plumbing systems in the new location.
+                  Quick response for any plumbing emergencies during the shifting process.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><img src="assets/icons/cleaner_icon.png" style="width:60px ;height:60px"></div>
+              <div>
+                <h4 class="title"><a href="clean.html" class="stretched-link">Cleaners</a></h4>
+                <p class="description">Pre-move and post-move cleaning services to ensure a clean and fresh start.
+                  Deep cleaning for both the old and new residences.
+                  Removal of debris and waste generated during the relocation process.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><img src="assets/icons/cooking_icon.png" style="width:60px ;height:60px"></div>
+              <div>
+                <h4 class="title"><a href="cook.html" class="stretched-link">Cook</a></h4>
+                <p class="description">Meal preparation services during the hectic moving period.
+                  Catering options for a welcome-home celebration in the new residence.
+                  Temporary cooking arrangements for users during the transition.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><img src="assets/icons/electrician_icon.png" alt=""
+                  style="width:60px ;height:60px"></div>
+              <div>
+                <h4 class="title"><a href="electric.html" class="stretched-link">Electrician</a></h4>
+                <p class="description">Safe disconnection and reinstallation of electrical appliances.
+                  Wiring and setup of electronic devices in the new home.
+                  Inspection of the electrical system in the new location.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- End Services Section -->
+
+
+
+
+
+    <!-- Faq Section - Home Page -->
+    <section id="faq" class="faq">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="content px-xl-5">
+              <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
+              <p>
+                Here are the most asked question about us,the queries user might through out the experience to help you
+                enhanced your experience.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="faq-container">
+              <div class="faq-item faq-active">
+                <h3><span class="num">1.</span> <span>How does service work?</span></h3>
+                <div class="faq-content">
+                  <p>We have connected to the servives provider in your city and gather them togetheron one
+                    platform.Search for the service you require and we will give you the closest and best service
+                    provider. </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="num">2.</span> <span>What types of services do you offer?
+
+                  </span></h3>
+                <div class="faq-content">
+                  <p> We offer a variety of services to meet your needs, including transport for goods, skilled labor,
+                    housekeeping services with maids, professional cooking services, and assistance from electricians
+                    and plumbers.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="num">3.</span> <span>Are your service providers background-checked?</span>
+                </h3>
+                <div class="faq-content">
+                  <p>Yes, all our service providers undergo rigorous background checks to ensure the safety and
+                    trustworthiness of our professionals.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="num">4.</span> <span>What if I'm not satisfied with the service?</span>
+                </h3>
+                <div class="faq-content">
+                  <p> Your satisfaction is our priority. If you have any concerns, please contact our customer support,
+                    and we will work to resolve any issues promptly</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="num">5.</span> <span>Do I need to provide any tools or equipment for the
+                    service?</span></h3>
+                <div class="faq-content">
+                  <p>In most cases, our service providers come equipped with the necessary tools and equipment. If there
+                    are specific requirements, it will be communicated during the booking process.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- End Faq Section -->
+
+
+    <!-- Testimonials Section - Home Page -->
+    <section id="testimonials" class="testimonials" style="background-color: white;">
+
+      <div class="container">
+
+        <div class="row align-items-center">
+
+          <div class="col-lg-5 info" data-aos="fade-up" data-aos-delay="100">
+            <h3>Testimonials</h3>
+            <p>
+              Here are some testimonials from users of SettleOnClick.
+            </p>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="swiper">
+              <template class="swiper-config">
+                {
+                "loop": true,
+                "speed" : 600,
+                "autoplay": {
+                "delay": 5000
+                },
+                "slidesPerView": "auto",
+                "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+                }
+                }
+              </template>
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="d-flex">
+                      <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img flex-shrink-0"
+                        alt="">
+                      <div>
+                        <h3>Saul Goodman</h3>
+                        <h4>Happy Home Mover</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span>"I recently moved to a new city and had no idea where to find reliable services for setting
+                        up my new home. Thankfully, I discovered SettleOnClick. From finding trustworthy movers to
+                        skilled electricians, the platform made my transition smooth and stress-free. Highly
+                        recommended!"</span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="d-flex">
+                      <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img flex-shrink-0"
+                        alt="">
+                      <div>
+                        <h3>Sara Wilsson</h3>
+                        <h4>Stress-Free Settler</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span>"I can't thank SettleOnClick enough for simplifying my move. The platform connected me with
+                        top-notch service providers for plumbing, electricians, and more. It's a one-stop solution for
+                        anyone looking to settle into a new home hassle-free."
+
+                      </span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="d-flex">
+                      <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img flex-shrink-0"
+                        alt="">
+                      <div>
+                        <h3>Jena Karlis</h3>
+                        <h4>Quick and Efficient</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span>"I needed urgent assistance with plumbing issues after my move, and SettleOnClick saved the
+                        day! Within a few clicks, I found a skilled plumber who responded promptly. The convenience and
+                        efficiency of this platform are unmatched."</span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="d-flex">
+                      <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img flex-shrink-0"
+                        alt="">
+                      <div>
+                        <h3>Matt Brandon</h3>
+                        <h4>Professional Services</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span>"Moving to a new city can be overwhelming, but SettleOnClick made the process much easier.
+                        The platform not only helped me find reliable moving services but also connected me with
+                        professional electricians and maids. I'm impressed with the quality of services
+                        available."</span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="d-flex">
+                      <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img flex-shrink-0"
+                        alt="">
+                      <div>
+                        <h3>John Larson</h3>
+                        <h4>Seamless Transition</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span>"Kudos to SettleOnClick for making my move a breeze. The platform's user-friendly interface
+                        and wide range of services allowed me to find everything I needed in one place. It's an
+                        invaluable resource for anyone navigating the challenges of relocation."</span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Testimonials Section -->
+
+
+
+
+
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span>SettleOnClick</span>
+            <span style=" color:red">.</span>
+          </a>
+          <p></p>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html#hero">Home</a></li>
+            <li><a href="index.html#about">About us</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="index.html#testimonials">Feedback</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="trans.html">Trasporters</a></li>
+            <li><a href="lab.html">Labourers</a></li>
+            <li><a href="electric.html">Electrician</a></li>
+            <li><a href="plumber.html">Plumber</a></li>
+            <li><a href="cook.html">Cooks</a></li>
+            <li><a href="clean.html">Cleaners</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>Innovation Hub,</p>
+          <p>Ashok Stambha</p>
+          <p>Nashik,Maharashtra</p>
+          <p>India.</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+          <p><strong>Email:</strong> <span>bondeleena18@gmail.com <br>leenabonde14@gmail.com</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>&copy; <span>Copyright</span> <strong class="px-1">SettleOnClick<span style=" color:red">.</span></strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+
+        Designed by <a href="">MANAVI</a>
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+
+  <!-- Scroll Top Button -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <script>
+    function getServiceInfo() {
+      var city = $('#city').find(":selected").val();
+      var service = $('#service').find(":selected").val();
+      // alert(service);
+      var service_data = "";
+      $.ajax({
+        url: "ajax_call.php",
+        type: "post",
+        data: {
+          city: city,
+          service: service
+        },
+        success: function (data, status) {
+          var service = JSON.parse(data);
+
+          for (var i = 0; i < service.length; i++) {
+            service_data += '<div class="col-lg-6 " data-aos="fade-up" data-aos-delay="100" style="color"><div class="service-item d-flex" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><div class="icon flex-shrink-0"><img src="assets/icons/information.png" style="width:60px ;height:60px;margin-left:5px;"></div><div><h4 class="title"><a href="#" class="stretched-link">' + service[i].service_provider_name + '</a><p class="description">' + service[i].Service + '</p></h4><p class="description"><b>Description:</b>'+ service[i].description + '</p><p class="description"><b>Contact us:</b>' + service[i].phone_no + '</p><p class="description"><b>Locality:</b>' + service[i].locality + '</p><p class="description"><b>City:</b>' + service[i].city + '</p></div></div></div> ';
+
+
+          }
+          $("#service_data").html(service_data);
+        }
+      });
+
+    }
+  </script>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</htmL>
+
